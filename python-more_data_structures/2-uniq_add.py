@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    return set_1 & set_2
+     unique_elements = set(my_list)
+     return sum(unique_elements)
