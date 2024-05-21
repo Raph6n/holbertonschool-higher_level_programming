@@ -1,36 +1,27 @@
-import unittest
-from my_module import add_integer  # Remplacez `my_module` par le nom du fichier où la fonction est définie
+>>> from add_integer import add_integer
 
-class TestAddInteger(unittest.TestCase):
-    def test_integers(self):
-        self.assertEqual(add_integer(10, 5), 15)
-        self.assertEqual(add_integer(-10, 5), -5)
-        self.assertEqual(add_integer(0, 0), 0)
-        self.assertEqual(add_integer(100, -200), -100)
+# Tests de cas normaux
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(2.5, 3.5)
+5
+>>> add_integer(100.1, 200.9)
+300
 
-    def test_floats(self):
-        self.assertEqual(add_integer(10.5, 4.3), 14)
-        self.assertEqual(add_integer(-10.5, -4.5), -15)
-        self.assertEqual(add_integer(0.0, 0.0), 0)
-        self.assertEqual(add_integer(100.1, -200.9), -100)
-
-    def test_default_value(self):
-        self.assertEqual(add_integer(10), 108)
-        self.assertEqual(add_integer(10.5), 108)
-        self.assertEqual(add_integer(-98), 0)
-        self.assertEqual(add_integer(-98.5), 0)
-
-    def test_type_errors(self):
-        with self.assertRaises(TypeError):
-            add_integer("10", 5)
-        with self.assertRaises(TypeError):
-            add_integer(10, "5")
-        with self.assertRaises(TypeError):
-            add_integer("10", "5")
-        with self.assertRaises(TypeError):
-            add_integer(None, 5)
-        with self.assertRaises(TypeError):
-            add_integer(10, None)
-
-if __name__ == '__main__':
-    unittest.main()
+# Tests de gestion des erreurs
+>>> add_integer(1, "2")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+>>> add_integer("1", 2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
