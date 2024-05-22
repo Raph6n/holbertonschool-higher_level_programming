@@ -1,3 +1,8 @@
+"""
+Testing say_my_name.py module
+
+>>> from say_my_name import say_my_name
+
 # Test case 1: Normal case with both first_name and last_name
 Input: ("John", "Doe")
 Expected Output: "My name is John Doe"
@@ -13,3 +18,5 @@ Expected Output: TypeError with message "first_name must be a string"
 # Test case 4: last_name is not a string
 Input: ("John", 456)
 Expected Output: TypeError with message "last_name must be a string"
+
+"""
