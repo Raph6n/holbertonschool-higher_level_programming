@@ -42,6 +42,4 @@ Testing print_square.py
     #     print_square(4)
     #     self.assertEqual(self.held_output.getvalue().strip(), "####\n####\n####\n####")
 
-if __name__ == '__main__':
-    unittest.main()
 """
