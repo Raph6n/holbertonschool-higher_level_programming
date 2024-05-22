@@ -1,26 +1,27 @@
+#!/usr/bin/python3
 def text_indentation(text):
     if not isinstance(text, str):
-        raise TypeError("text must be a string")
-    
-    # Characters to look for to add new lines after
-    special_chars = ['.', '?', ':']
-    
-    # Initialize an empty string to hold the modified text
-    new_text = ""
-    
-    # Iterate through each character in the text
-    i = 0
-    while i < len(text):
-        new_text += text[i]
-        if text[i] in special_chars:
-            new_text += "\n\n"
-            # Skip any following spaces after the special character
-            while i + 1 < len(text) and text[i + 1] == ' ':
-                i += 1
-        i += 1
+        raise TypeError('text must be a string')
 
-    # Print the result, removing any leading/trailing spaces from each line
-    print("\n".join(line.strip() for line in new_text.split("\n")))
+    idx = 0
+    new_string = ''
+    starting = True
 
-# Example usage:
-text_indentation("Hello. How are you? I hope you are well: stay safe.")
+    while idx < len(text):
+        if text[idx] == ' ' and starting:
+            idx += 1
+            continue
+
+        starting = False
+
+        if text[idx] in '.?:':
+            new_string += text[idx] + '\n\n'
+            idx += 1
+            while idx < len(text) and text[idx] == ' ':
+                idx += 1
+            continue
+
+        new_string += text[idx]
+        idx += 1
+
+    print(new_string, end='')
