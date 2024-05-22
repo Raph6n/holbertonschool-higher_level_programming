@@ -1,0 +1,15 @@
+# Test case 1: Normal case with both first_name and last_name
+Input: ("John", "Doe")
+Expected Output: "My name is John Doe"
+
+# Test case 2: Case with only first_name
+Input: ("Alice")
+Expected Output: "My name is Alice"
+
+# Test case 3: first_name is not a string
+Input: (123, "Doe")
+Expected Output: TypeError with message "first_name must be a string"
+
+# Test case 4: last_name is not a string
+Input: ("John", 456)
+Expected Output: TypeError with message "last_name must be a string"
