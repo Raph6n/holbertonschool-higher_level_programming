@@ -4,3 +4,44 @@ Testing print_square.py
 
 <<< from print_square import print_square
 
+# Test case for no parameters
+    # def test_no_params(self):
+    #     with self.assertRaises(TypeError):
+    #         print_square()
+
+    # Test case for non-integer size
+    # def test_size_not_integer(self):
+    #     with self.assertRaises(TypeError) as e:
+    #         print_square("3")
+    #     self.assertEqual(str(e.exception), "size must be an integer")
+
+    # Test case for negative size
+    # def test_size_negative(self):
+    #     with self.assertRaises(ValueError) as e:
+    #         print_square(-1)
+    #     self.assertEqual(str(e.exception), "size must be >= 0")
+
+    # Test case for float size
+    # def test_size_float(self):
+    #     with self.assertRaises(TypeError) as e:
+    #         print_square(3.5)
+    #     self.assertEqual(str(e.exception), "size must be an integer")
+
+    # Test case for size zero
+    # def test_size_zero(self):
+    #     print_square(0)
+    #     self.assertEqual(self.held_output.getvalue().strip(), "")
+
+    # Test case for size two
+    # def test_size_two(self):
+    #     print_square(2)
+    #     self.assertEqual(self.held_output.getvalue().strip(), "##\n##")
+
+    # Test case for size four
+    # def test_size_four(self):
+    #     print_square(4)
+    #     self.assertEqual(self.held_output.getvalue().strip(), "####\n####\n####\n####")
+
+if __name__ == '__main__':
+    unittest.main()
+"""
