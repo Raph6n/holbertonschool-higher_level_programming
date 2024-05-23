@@ -146,4 +146,4 @@ class Rectangle:
 
         """
 
-        print("Rectangle delete...")
+        print("Bye Rectangle...")
