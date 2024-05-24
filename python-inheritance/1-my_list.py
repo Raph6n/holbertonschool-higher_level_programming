@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""MyList
+"""myList
 """
 
 
-class MyList(list):
+class myList(list):
     """Contains list
     """
 
