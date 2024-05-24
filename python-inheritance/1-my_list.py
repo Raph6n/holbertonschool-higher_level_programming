@@ -1,14 +1,8 @@
 #!/usr/bin/python3
-"""myList
-"""
+"""mylist that inherits from list"""
 
 
-class myList(list):
-    """Contains list
-    """
-
+class MyList(list):
+    """that prints the list, but sorted (ascending sort)"""
     def print_sorted(self):
-        """Prints self in sorted format
-        """
-
         print(sorted(self))
