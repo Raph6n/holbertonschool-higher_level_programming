@@ -1,27 +1,17 @@
 #!/usr/bin/python3
+"""A function that returns the dictionary description 
+   with simple data structure (list, dictionary, string, 
+   integer, and boolean) for JSON serialization of an object.
 """
-Returns the dictionary description with simple data structure
-for JSON serialization of an object.
-"""
-
-import json
 
 def class_to_json(obj):
-    """
-    Converts an object's attributes to a dictionary that can be serialized to JSON.
-    
-    Parameters:
-    - obj: The object to convert.
-    
+    """Returns the dictionary representation of an object.
+
+    Args:
+        obj: An instance of a class.
+
     Returns:
-    - dict: A dictionary representation of the object's attributes suitable for JSON serialization.
+        A dictionary containing all the attributes of the object 
+        that can be serialized to JSON.
     """
-    desc = {}
-
-    for item_name in dir(obj):
-        if not item_name.startswith('__'):
-            item_value = getattr(obj, item_name)
-            if isinstance(item_value, (list, dict, str, int, bool)):
-                desc[item_name] = item_value
-
-    return desc
+    return obj.__dict__
